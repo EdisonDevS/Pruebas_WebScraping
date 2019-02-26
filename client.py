@@ -17,3 +17,4 @@ sock.send(contacto.encode('utf-8'))
 while True:
     msg=input("Mensaje: ")
     sock.send(msg.encode('utf-8'))
+    sock.close()
