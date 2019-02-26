@@ -5,11 +5,7 @@ import socket
 
 sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-config=("192.168.0.17",10000)
-
-while True:
-    contacto=input("Contacto: ")
-    send_msg(contacto)
+config=("192.168.0.43",10000)
 
 def send_msg(contacto):
     sock.connect(config)
@@ -18,3 +14,8 @@ def send_msg(contacto):
     msg=input("Mensaje: ")
     sock.send(msg.encode('utf-8'))
     sock.close()
+
+while True:
+    contacto=input("Contacto: ")
+    send_msg(contacto)
+

@@ -6,7 +6,7 @@ import socket
 sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 print("Iniciando servidor")
-config=("192.168.0.17",10000)
+config=("192.168.0.43",10000)
 sock.bind(config)
 sock.listen(1)
 
