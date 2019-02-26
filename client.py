@@ -17,3 +17,4 @@ def send_msg(contacto):
     sock.send(contacto.encode('utf-8'))
     msg=input("Mensaje: ")
     sock.send(msg.encode('utf-8'))
+    sock.close()
