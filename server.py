@@ -8,7 +8,7 @@ sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("Iniciando servidor")
 config=("192.168.0.43",10000)
 sock.bind(config)
-sock.listen(1)
+sock.listen(100)
 
 print("Servidor en pie")
 
@@ -24,6 +24,7 @@ while True:
         while True:
             msg=con.recv(4000)
             if msg:
+                print("Leegó: "+msg.decode('utf-8'))
                 try:
                     usuario=driver.find_element_by_xpath('//span[@title="{}"]'.format(contacto.decode('utf-8')))
                     usuario.click()
@@ -35,3 +36,4 @@ while True:
 
                 enviar=driver.find_element_by_class_name("_35EW6")
                 enviar.click()
+                break
