@@ -9,7 +9,7 @@ def send_msg(contacto,msg):
     sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect(config)
     print("conexion establecida")
-    sock.send(contacto.encode('utf-8'))
+    msg=contacto+"€"+msg
     sock.send(msg.encode('utf-8'))
     sock.close()
 
