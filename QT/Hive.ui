@@ -18,7 +18,7 @@
     <rect>
      <x>9</x>
      <y>9</y>
-     <width>171</width>
+     <width>191</width>
      <height>521</height>
     </rect>
    </property>
@@ -30,21 +30,81 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>169</width>
+      <width>189</width>
       <height>519</height>
      </rect>
     </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>171</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="layCont"/>
+    </widget>
    </widget>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="txtMsg">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>450</y>
-     <width>104</width>
-     <height>70</height>
+     <x>213</x>
+     <y>499</y>
+     <width>491</width>
+     <height>31</height>
     </rect>
    </property>
+  </widget>
+  <widget class="QPushButton" name="btnEnviar">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>500</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enviar</string>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>591</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>589</width>
+      <height>479</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="lblChat">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>401</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chat: </string>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>
