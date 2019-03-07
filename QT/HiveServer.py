@@ -28,13 +28,9 @@ while True:
             msg=mensaje_descompuesto[1]
             
             if contacto=="ftc_request":
-                #se solicitan los contactos para la primera conección
+                #se solicitan los contactos para la primera conexión
 
                 chats = driver.find_elements_by_xpath('//span[@class = "_1wjpf"]')
-
-                cant_contacts=str(len(chats))
-                
-                con.send(cant_contacts.encode('utf-8'))
 
                 contacts=""
                 for contacto in chats:

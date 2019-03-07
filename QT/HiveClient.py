@@ -34,14 +34,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         msg="ftc_request€contacts"
 
         sock.send(msg.encode('utf-8'))
-                
-        c=0
-        #solicito la cantidad de contactos
-        while(True):
-            cant_contacts=sock.recv(10)
-            if(cant_contacts):
-                c=int(cant_contacts.decode('utf-8'))
-                break
+
         #solicito todos los contactos
         self.contacts=[]
         contacto=sock.recv(1000)
