@@ -44,9 +44,10 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 break
         #solicito todos los contactos
         self.contacts=[]
-        for x in range(c):
-            contacto=sock.recv(1000)
-            button = QtWidgets.QPushButton(contacto.decode('utf-8'))
+        contacto=sock.recv(1000)
+        contactos=contacto.decode('utf-8').split("€")
+        for x in contactos:
+            button = QtWidgets.QPushButton(x)
             button.clicked.connect(self.setContact)
             self.contacts.append(button)
 

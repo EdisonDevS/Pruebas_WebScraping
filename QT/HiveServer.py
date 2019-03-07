@@ -16,8 +16,6 @@ print("Servidor en pie")
 driver=webdriver.Chrome("/home/edison/chromedriver")
 driver.get("https://web.whatsapp.com/")
 
-
-
 while True:
     con, direccion = sock.accept()
     print("coneccion desde: "+direccion[0])
@@ -38,10 +36,12 @@ while True:
                 
                 con.send(cant_contacts.encode('utf-8'))
 
+                contacts=""
                 for contacto in chats:
                     nombre = contacto.get_attribute("title")
-                    print(nombre)
-                    con.send(nombre.encode('utf-8'))
+                    contacts = contacts + "€" + nombre
+
+                con.send(contacts.encode('utf-8'))    
             else:
                 print("Contacto: "+contacto)
                 print("Mensaje: "+msg)
