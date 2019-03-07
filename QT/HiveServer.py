@@ -14,6 +14,7 @@ sock.listen(1)
 print("Servidor en pie")
 
 driver=webdriver.Chrome("/home/edison/chromedriver")
+driver.set_window_size(1400,10000)
 driver.get("https://web.whatsapp.com/")
 
 while True:
@@ -37,6 +38,7 @@ while True:
                     nombre = contacto.get_attribute("title")
                     contacts = contacts + "€" + nombre
 
+                print(contacts)
                 con.send(contacts.encode('utf-8'))    
             else:
                 print("Contacto: "+contacto)

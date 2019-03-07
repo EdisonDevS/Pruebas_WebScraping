@@ -22,6 +22,9 @@
      <height>521</height>
     </rect>
    </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
    <property name="widgetResizable">
     <bool>true</bool>
    </property>
@@ -30,7 +33,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>189</width>
+      <width>175</width>
       <height>519</height>
      </rect>
     </property>
@@ -39,11 +42,18 @@
       <rect>
        <x>10</x>
        <y>0</y>
-       <width>171</width>
-       <height>511</height>
+       <width>161</width>
+       <height>521</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="layCont"/>
+     <layout class="QVBoxLayout" name="layCont">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+     </layout>
     </widget>
    </widget>
   </widget>
