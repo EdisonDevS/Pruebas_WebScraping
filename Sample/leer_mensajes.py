@@ -30,3 +30,10 @@ while(True):
     print("\nMENSAJES RECIBIDOS:")
     for x in entrada:
         print (x.get_attribute('innerHTML'))
+
+    
+    todos=driver.find_elements_by_xpath('//span[@class="selectable-text invisible-space copyable-text"]')
+
+    print("\nTODOS LOS MENSAJES:")
+    for x in todos:
+        print (x.get_attribute('innerHTML'))
