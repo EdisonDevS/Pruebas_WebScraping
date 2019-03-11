@@ -114,6 +114,28 @@
       <string>Chat: </string>
      </property>
     </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>301</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="layIn"/>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>299</x>
+       <y>19</y>
+       <width>291</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="layOut"/>
+    </widget>
    </widget>
   </widget>
  </widget>
