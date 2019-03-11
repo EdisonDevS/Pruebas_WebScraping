@@ -96,7 +96,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             if enviados!=[] and todos[0]==enviados[0]:
                 #print("Yo: "+enviados[0])
                 button = QtWidgets.QPushButton(enviados[0])
-                button.setStyleSheet("border: 0px solid rgb(224, 161, 75); background-color: rgb(224, 161, 75)")
+                button.setStyleSheet("border: 0px solid rgb(224, 161, 75); background-color: rgb(224, 161, 75);border-radius: 5px")
                 send_buttons.append(button)
                 void_button = QtWidgets.QPushButton("")
                 void_button.setStyleSheet("border: 0px solid white;") 
@@ -109,7 +109,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 void_button.setStyleSheet("border: 0px solid white;")
                 send_buttons.append(void_button)
                 button = QtWidgets.QPushButton(recibidos[0])
-                button.setStyleSheet("border: 0px solid rgb(232, 225, 71);background-color: rgb(232, 225, 71)")
+                button.setStyleSheet("border: 0px solid rgb(232, 225, 71);background-color: rgb(232, 225, 71);border-radius: 5px")
                 recived_buttons.append(button)
                 todos.remove(todos[0])
                 recibidos.remove(recibidos[0])
