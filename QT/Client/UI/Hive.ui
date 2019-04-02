@@ -67,7 +67,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnEnviar">
+  <widget class="QPushButton" name="sendButton">
    <property name="geometry">
     <rect>
      <x>710</x>
