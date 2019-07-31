@@ -17,6 +17,7 @@ class service:
 
             if self.message.getContact() == "FirstTimeConnectionRequest":
                 contacts = web.getContacts()
+                print(contacts)
                 self.server.sendMessage(contacts)
             elif self.message.getMessage() == "MessagesRequest":
                 messagesPackage=web.getMessages(self.message.getContact())

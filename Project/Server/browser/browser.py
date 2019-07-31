@@ -12,7 +12,7 @@ class browser:
         self.driver.get("https://web.whatsapp.com/")
 
     def updateContacts(self):
-        chats = self.driver.find_elements_by_xpath('//span[@class = "_1wjpf"]')
+        chats = self.driver.find_elements_by_xpath('//span[@class = "_19RFN"]')
 
         self.contacts=""
         for contact in chats:
@@ -26,8 +26,8 @@ class browser:
 
 
     def sentMessages(self):
-        sent = self.driver.find_elements_by_xpath('//div[@class = "_3_7SH _3DFk6 message-out" or @class = "_3_7SH _3DFk6 message-out tail"]/div[@class="Tkt2p"]/div[@class="copyable-text"]/div[@class="_3zb-j ZhF0n"]/span[@class="selectable-text invisible-space copyable-text"]')
-
+        sent = self.driver.find_elements_by_xpath('//div[@class = "_1zGQT _2ugFP message-out" or @class = "_1zGQT _2ugFP message-out tail"]/div[@class="-N6Gq"]/div[@class="copyable-text"]/div[@class="_12pGw EopGb"]/span[@class="selectable-text invisible-space copyable-text"]')
+        print(sent)
         for mess in sent:
             self.messagePackage=self.messagePackage+'€'+mess.get_attribute('innerHTML')
         
@@ -35,8 +35,8 @@ class browser:
 
 
     def recivedMessages(self):
-        recived=self.driver.find_elements_by_xpath('//div[@class = "_3_7SH _3DFk6 message-in" or @class = "_3_7SH _3DFk6 message-in tail"]/div[@class="Tkt2p"]/div[@class="copyable-text"]/div[@class="_3zb-j ZhF0n"]/span[@class="selectable-text invisible-space copyable-text"]')
-
+        recived=self.driver.find_elements_by_xpath('//div[@class = "_1zGQT _2ugFP message-in" or @class = "_1zGQT _2ugFP message-in tail"]/div[@class="-N6Gq"]/div[@class="copyable-text"]/div[@class="_12pGw EopGb"]/span[@class="selectable-text invisible-space copyable-text"]')
+        print(recived)
         for mess in recived:
             self.messagePackage=self.messagePackage+'€'+mess.get_attribute('innerHTML')
         
@@ -74,10 +74,10 @@ class browser:
             user=self.driver.find_element_by_xpath('//span[@title="{}"]'.format(contact))
             user.click()
             
-            textBox=self.driver.find_element_by_class_name("_2S1VP")
+            textBox=self.driver.find_element_by_class_name("_13mgZ")
             textBox.send_keys(message)
 
-            sendButton=self.driver.find_element_by_class_name("_35EW6")
+            sendButton=self.driver.find_element_by_class_name("_3M-N-")
             sendButton.click()
         except:
             print("No se ha encontrado el contacto")                
